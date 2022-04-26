@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+:root {
+    --blue-100: #170132;
+    --blue-50: #361542;
+    --gray: #573e54;
+    --green: #85ae72;
+    --beige: #bce1ab;
+
+}
+
+
+@media (max-width: 1080px) { //para ipad
+    html{
+        font-size: 93.75%;
+    }
+}
+
+
+@media (max-width: 720px) { //para celular
+    html{
+        font-size: 87.5%;
+    }
+}
+
+
+body {
+    background-color: var(--blue-100);
+    color: var(--beige);
+
+}
+
+body, input, textarea, select, button {
+    font: 400 1rem "Raleway", sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
