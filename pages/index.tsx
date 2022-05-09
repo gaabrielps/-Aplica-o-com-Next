@@ -17,7 +17,7 @@ export default function Home() {
           <p>Get acess to all the publications <br/>
           <span>for 9.90 month </span>
           </p>
-          <SubscribeButton />
+           <SubscribeButton />
 
         </section>
         <img src="/images/avatar.svg" alt="girl coding" />
