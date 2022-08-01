@@ -15,6 +15,13 @@
     display: flex;
     height: 5rem;
 
+    h1 {
+        font-size: 50px;
+        margin-top: 10px;
+    }
+
+   
+
     nav { 
         margin-left: 5rem;
         height: 5rem;
@@ -47,8 +54,8 @@
     
             &.active::after {
                 content: '';
-                height: 10px;
-                border-radius: 3px 3px 0 0;
+                height: 5px;
+                border-radius: 0px 0px 0 0;
                 width: 100%;
                 position: absolute;
                 bottom: 1px;
