@@ -22,7 +22,13 @@ export default NextAuth({
   ],
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
-      console.log(user)
+      
+
+      await fauna.query(
+        q.Create(
+          q.Collection('users'),
+          {data: {email}}))
+
       return true
     },
   }
