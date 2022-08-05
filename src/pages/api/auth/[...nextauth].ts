@@ -1,4 +1,4 @@
-import{Query as q} from 'faunadb'
+import{query as q} from 'faunadb'
 
 import NextAuth from "next-auth"
 import GithubProvider from "next-auth/providers/github"
@@ -21,15 +21,24 @@ export default NextAuth({
     }),
   ],
   callbacks: {
-    async signIn({ user, account, profile, email, credentials }) {
+    async signIn({ user, account, profile}) {
+     
+      const {email} = user
       
+      try{ //o try irá evitar que a pessoa faça o login sem a inserção no banco de dados
 
-      await fauna.query(
-        q.Create(
-          q.Collection('users'),
-          {data: {email}}))
+        await fauna.query(
+          q.Create(
+            q.Collection('users'),
 
-      return true
+            {data: {email}}))
+
+        return true
+      } catch {
+        return false
+      }
+
+      
     },
   }
 })
